@@ -23,9 +23,10 @@ def jogar():
 
     #Mostrar a palavra chutada para o usuarios com as letras corretas e os espacos para aquelas letras
     #que ainda nao adivinhou
-    palavra_chutada = []
-    for index in range(0,len(palavra_secreta)):
-        palavra_chutada.append("_")
+    #palavra_chutada = []
+    #for index in range(0,len(palavra_secreta)):
+    #    palavra_chutada.append("_")
+    palavra_chutada = ["_" for letra in palavra_secreta]
 
     while (not enforcou and not acertou):
 
@@ -53,7 +54,7 @@ def jogar():
 
             # Atingiu o numero maximo de erros permitidos
             if (erros == max_erros):
-                print("Oh-oh! Você foi enforcado!")
+                print("Oh-oh! Você foi enforcado! A palavra secreta era: {}".format(palavra_secreta))
                 enforcou = True
 
 
