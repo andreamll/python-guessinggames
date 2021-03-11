@@ -10,9 +10,10 @@ def jogar():
     enforcou = False
     acertou = False
 
-    #So pode errar ate 6x
+    #So pode errar ate 7x
     erros = 0
     max_erros = 7
+    chutes_incorretos = []
 
     #Mostrar a palavra chutada para o usuarios com as letras corretas e os espacos para aquelas letras
     #que ainda nao adivinhou
@@ -28,7 +29,7 @@ def jogar():
 
         #chutou uma letra que nao faz parte da palavra secreta
         if (not achou_letra):
-            erros = contar_erros(chute, erros, max_erros)
+            erros = contar_erros(chute, erros, max_erros, chutes_incorretos)
             enforcou = checar_se_enforcou(palavra_secreta, erros, max_erros)
 
         #chutou uma letra que faz parte da palavra secreta
@@ -90,9 +91,13 @@ def conferir_chute_jogador(chute, palavra_secreta, palavra_chutada):
 
     return achou_letra
 
-def contar_erros(chute, erros, max_erros):
+def contar_erros(chute, erros, max_erros, chutes_incorretos):
     erros = erros + 1
     print("Não há a letra {} na palavra secreta. Total de erros: {} de {} permitidos.".format(chute, erros, max_erros))
+    print()
+
+    chutes_incorretos.append(chute)
+    print("Banco de letras já informadas: {}".format(chutes_incorretos))
     atualizar_enforcamento(erros)
     return erros
 
