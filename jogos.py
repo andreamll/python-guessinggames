@@ -1,4 +1,4 @@
-import forca
+import forcacomfuncoes
 import adivinhacao
 
 print("*************")
@@ -11,7 +11,7 @@ jogo = int(input("Escolha um jogo: "))
 
 if (jogo == 1):
     print("Iniciando o jogo da Forca....")
-    forca.jogar()
+    forcacomfuncoes.jogar()
 else:
     print("Iniciando o jogo da Adivinhação ....")
     adivinhacao.jogar()
