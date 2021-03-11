@@ -6,14 +6,11 @@ def jogar():
     print("**************************")
 
     #Relacao de palavras
-    arquivo = open("palavras.txt", "r")
     dicionario_palavras = []
-
-    for linha in arquivo:
-        linha = linha.strip()
-        dicionario_palavras.append(linha)
-
-    arquivo.close()
+    with open("palavras.txt", "r") as arquivo:
+        for linha in arquivo:
+            linha = linha.strip()
+            dicionario_palavras.append(linha)
 
     #Define a palavra secreta
     index_random = random.randrange(0,len(dicionario_palavras))
