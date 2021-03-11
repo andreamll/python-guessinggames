@@ -6,7 +6,7 @@ def jogar():
     print("**************************")
 
     #Relacao de palavras
-    dicionario_palavras = ("Amargo",	"Amor",	"Artista",	"Astronauta",	"Bailarina",	"Banana",	"Basquete",	"Bebe",	"Bilhete",	"Cadeado",	"Cadeira",	"Calculadora",	"Carteira",	"Cego",	"Comida",	"Escola",	"Escova",	"Estatua",	"Frio",	"Futebol",	"Internet",	"Lapis",	"Livro",	"Lixo",	"Maquina",	"Massagem",	"Médico",	"Microbio",	"Odio",	"Pescador",	"Pintor",	"Policial",	"Prancha",	"Professor",	"Romance",	"Sacola",	"Semente",	"Sombra",	"Vitoria",	"Xadrez")
+    dicionario_palavras = ("Alice","Amargo","Amor",	"Artista",	"Astronauta",	"Bailarina",	"Banana",	"Basquete",	"Bebe",	"Bilhete",	"Cadeado",	"Cadeira",	"Calculadora",	"Carteira",	"Cego",	"Comida",	"Escola",	"Escova",	"Estatua",	"Frio",	"Futebol",	"Internet",	"Lapis",	"Livro",	"Lixo",	"Maquina",	"Massagem",	"Médico",	"Microbio",	"Odio",	"Pescador",	"Pintor",	"Policial",	"Prancha",	"Professor",	"Romance",	"Sacola",	"Semente",	"Sombra",	"Vitoria",	"Xadrez")
 
     #Define a palavra secreta
     index_random = random.randrange(0,40)
